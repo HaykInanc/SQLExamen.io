@@ -21626,6 +21626,20 @@ function setQuery(){
 	codeElem.value = localStorage.getItem('query');
 }
 
+
+let descrBtn = document.getElementById('descr');
+let modelCloseBtn = document.getElementById('close');
+
+descrBtn.addEventListener('click', ()=>{
+	let modelWindow = document.getElementById('modelContainer');
+    	modelWindow.classList.add("active")
+})
+
+modelCloseBtn.addEventListener('click', ()=>{
+	let modelWindow = document.getElementById('modelContainer');
+    	modelWindow.classList.remove("active")
+})
+
 let runBtn = document.getElementById('run');
 let codeElem = document.getElementById('code');
 runBtn.addEventListener('click', ()=>run());

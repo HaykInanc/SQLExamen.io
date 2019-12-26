@@ -13,6 +13,7 @@
 			<textarea spellcheck="false" id="code"></textarea>
 			<div class="btnContainer">
 					<button id="run">Запустить</button>
+					<button id="descr">Описание</button>
 					<button id="load">Выгрузить</button>
 			</div>
 			<div class="result"></div>
@@ -23,6 +24,160 @@
 			</div>
 			<div class="btnContainer">
 					<button id="loadData">Загрузить данные</button>
+			</div>
+		</div>
+	</div>
+	<div id="modelContainer">
+		
+		<div id="model">
+			<div id="close">
+				X
+			</div>
+			<div class="container">
+				<h2 class="underline">Изначально в базе следующие таблицы</h2>
+				<div class="taskDescr">
+
+					<h3>Customesr</h3>
+					<p>содержит описание пользователей</p>
+					<ul>
+						<li>
+							<b>customerId</b>
+							<p>идентификатор пользователя</p>
+						</li>
+						<li>
+							<b>gender</b>
+							<p>пол</p>
+						</li>
+						<li>
+							<b>age</b>	
+							<p>возраст</p>
+						</li>
+						<li>
+							<b>loyaltyСard</b>
+							<p>пользуется ли покупатель картой лояльности (0 - нет, 1 - да)</p>
+						</li>
+					</ul>
+
+					
+					<h3>Categories</h3>
+					<p>содержит названия категорий</p>
+					<ul>
+						<li>
+							<b>id</b>
+							<p>идентификатор категории</p>
+						</li>
+						<li>
+							<b>title</b>
+							<p>название</p>
+						</li>
+					</ul>
+					
+
+					<h3>TransactionHist</h3>
+					<p>содержит данные о том, сколько денег потрачено на каждой транзакции</p>
+					<ul>
+						<li>
+							<b>transactionId</b>
+							<p>идентификатор транзакции</p>
+						</li>
+						<li>
+							<b>userID</b> 	
+							<p>идентификатор пользователя </p>
+						</li>
+						<li>
+							<b>sum</b>	   	
+							<p>сумма, потраченная в транзакции</p>
+						</li>
+						<li>
+							<b>created_at</b>
+							<p>дата транзакции</p>
+						</li>
+					</ul>
+
+					<h3>TransactionDetails </h3>
+					<p>содержит данные о том, какие категории входят в транзакции. </p>
+
+					<ul>
+						<li>
+							<b>userID</b>
+							<p>идентификатор пользователя</p>
+						</li>
+						<li>
+							<b>categoryID</b>
+							<p>идентификатор категории</p>
+						</li>
+						<li>
+							<b>transactionId</b>
+							<p>идентификатор транзакции</p>
+						</li>
+					</ul>
+				</div>
+				
+				<h2 class="underline">Необходимо сформировать следующие таблицы:</h2>
+				<div class="taskDescr">
+					
+
+					<h3>transactionCnt</h3>
+					<p>содержит информацию о кол-ве транзакций в каждом месяце для каждого пользователя.</p>
+
+					<ul>
+						<li>
+							<b>customerId</b>
+							<p>идентификатор пользователя</p>
+						</li>
+						<li>
+							<b>transactionCnt</b>
+							<p>кол-во транзакций</p>
+						</li>
+						<li>
+							<b>month</b>
+							<p>номер месяца</p>
+						</li>
+					</ul>
+
+					
+					<h3>transactionSum</h3>
+					<p>
+					содержит информацию о средней сумме потраченых денег в каждом месяце для каждого пользователя.
+					</p>
+
+					<ul>
+						<li>
+							<b>customerId</b>
+							<p>идентификатор пользователя</p>
+						</li>
+						<li>
+							<b>avgSum</b>
+							<p>средняя сумма</p>
+						</li>
+						<li>
+							<b>month</b>
+							<p>номер месяца</p>
+						</li>
+					</ul>
+
+					
+					
+					<h3>categProp</h3>
+
+					<p>содержит информацию о пользователе и колличестве покупок из разных категорий</p>
+
+					<ul>
+						<li>
+							<b>userID</b>
+							<p>идентификатор пользователя</p>
+						</li>
+						<li>
+							<b>goodCnt</b>
+							<p>кол-во товара из категории, купленного пользователем</p>
+						</li>
+						<li>
+							<b>title</b>
+							<p>название категории</p>
+						</li>
+					</ul>
+					
+				</div>
 			</div>
 		</div>
 	</div>
