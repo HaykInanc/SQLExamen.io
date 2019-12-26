@@ -21597,7 +21597,7 @@ function loadData(text, fileName){
 
 	let elem = document.createElement('a');
 	elem.setAttribute('download', fileName);
-	elem.setAttribute('href', hrefStr);
+	elem.setAttribute('href', encodeURI(hrefStr));
 	elem.click();
 }
 
